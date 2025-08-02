@@ -12,7 +12,7 @@ end
 
 def get_response(prompt)
   puts 'Sending request..'
-  uri = URI("https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=#{ENV['API_KEY']}")
+  uri = URI("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=#{ENV['API_KEY']}")
   http = Net::HTTP.new(uri.host, uri.port)
   http.use_ssl = true
   request = Net::HTTP::Post.new(uri)
